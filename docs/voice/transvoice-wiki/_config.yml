@@ -1,0 +1,75 @@
+remote_theme: just-the-docs/just-the-docs
+
+include:
+  - translate/zh_Hans
+  - img
+exclude:
+  - translate/en
+  - translate/en/**/*.md
+  - wiki
+  - wiki/**/*.md
+
+
+collections:
+  zh_Hans:
+    output: true
+    permalink: /:path/
+  en:
+    output: false
+    permalink: /en/:path/
+  wiki:
+    output: false
+    permalink: /wiki/:path/
+
+
+just_the_docs:
+  collections:
+    zh_Hans:
+      name: "TransVoice-Wiki 中文翻译站"
+      nav_order: 1
+  exclude:
+    - wiki
+    - translate/en
+
+# Set a path/url to a logo that will be displayed instead of the title
+logo: "/img/icon.png"
+# color_scheme: dark
+color_scheme: darkOverride
+
+title: Voice Resource Project
+description: Resources for transvoice students
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "[URL HERE]" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+#
+
+aux_links:
+  "Discord Server":
+    - "https://wiki.sumianvoice.com/wiki/pages/communities/#voice-art-project"
+  "This Project on GitHub":
+    - "https://github.com/SumianVoice/sumianvoice.github.io"
+
+# Footer
+
+footer_content: ""
+
+# Footer last edited timestamp
+# last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+# last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Contribute to this page on GitHub."
+gh_edit_repository: "https://github.com/SumianVoice/sumianvoice.github.io" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
+# gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+defaults:
+  -
+    scope:
+      path: "**/*.md" # an empty string here means all files in the project
+      type: "pages" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "page"
